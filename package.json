@@ -1,0 +1,19 @@
+{
+  "name": "license-manager-v1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davsensan/license-manager.git"
+  },
+  "author": "David Señas Sanvicente",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davsensan/license-manager/issues"
+  },
+  "homepage": "https://github.com/davsensan/license-manager#readme"
+}
