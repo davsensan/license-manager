@@ -1,0 +1,196 @@
+[
+    {
+        "model": "Group",
+        "data": {
+            "id" : "12df8176-0813-49d1-8767-92f4d89f1c11",
+            "name": "Grupo1",
+            "type": "Teldat",
+            "email": "org1@cor.com",
+            "sensors": "Atlas-i70:223;H2-Rail:227;H2-Auto-plus:221;Teldat-M1:199;H2-Auto:217;Teldat-iM8:219;Teldat-V:191;Atlas-60:187;generic:999"
+,            "comments": "Grupo de tipo Teldat con usuarios"
+        }
+    },
+    {
+        "model": "Group",
+        "data": {
+            "cluster_id": "12df8176-0813-49d1-8867-77f4d89f1c11",
+            "name": "Grupo2",
+            "type": "RedBorder",
+            "email": "org2@cor.com",
+            "sensors": "IPS:event;Flow:flow;Social:social;Vault:vault",
+            "comments": "Grupo de tipo RedBorder sin usuarios"
+        }
+    },
+    {
+        "model": "Group",
+        "data": {
+            "id" : "12df8176-0813-49d1-8767-92f4d89f1c15",
+            "name": "Grupo3",
+            "type": "Teldat",
+            "email": "org_licenses@cor.com",
+            "sensors": "Atlas-i70:223;H2-Rail:227;H2-Auto-plus:221;Teldat-M1:199;H2-Auto:217;Teldat-iM8:219;Teldat-V:191;Atlas-60:187;generic:999",
+            "comments": "Grupo de tipo Teldat con liencias"
+        }
+    },
+    {
+        "model": "Group",
+        "data": {
+            "name": "Grupo4",
+            "type": "Teldat",
+            "email": "org_no_licenses@cor.com",
+            "sensors": "Atlas-i70:223;H2-Rail:227;H2-Auto-plus:221;Teldat-M1:199;H2-Auto:217;Teldat-iM8:219;Teldat-V:191;Atlas-60:187;generic:999",
+            "comments": "Grupo Teldat sin licencias"
+        }
+    }, 
+    {
+        "model": "User",
+        "data": {
+            "id" : "12df8176-0813-49d1-8767-92f4d89f1a01",
+            "name": "Admin",
+            "email": "admin@redborder.com",
+            "hashed_password": "sha1$53b53d83$1$d0ac537f69356fcd7e23f81fcbb1924df7d9d7f8",
+            "role": "admin",
+            "resetPasswordToken": "testtoken",
+            "resetPasswordExpires" : "2100-01-01",
+            "Group" : {
+                "name" : "Grupo1"
+            }
+        }
+    },    
+    {
+        "model": "User",
+        "data": {
+            "id" : "12df8176-0813-49d1-8767-92f4d89f1a81",
+            "name": "Usuario",
+            "email": "normal@redborder.com",
+            "hashed_password": "sha1$d0f78cf7$1$d245767564757467ceaf1ebc4a501b05d5691738",
+            "role": "normal",
+            "Group" : {
+                "name" : "Grupo1"
+            }
+        }
+    },
+        {
+        "model": "Cluster",
+        "data": {
+            "id": "12df8176-0813-49d1-8867-77f4d89f1c33",
+            "name" : "Cluster de Madrid",
+            "commnets" : "Cluster del grupo1 montado en Madrid"
+        }
+    },
+        {
+        "model": "Cluster",
+        "data": {
+            "id": "12df8176-0813-49d1-8867-77f4d89f1c11",
+            "name" : "Cluster de Sevilla",
+            "commnets" : "Cluster del grupo2 montado en Sevilla"
+        }
+    },
+    {
+        "model": "License_pool",
+        "data": {
+            "id" : "12df8176-0813-49d1-8767-92f4d89f1ccc",
+            "license_uuid" : "12df8176-0813-49d1-8767-92f4d89f1abc",
+            "expires_at": "2019-01-01",
+            "duration": "6",
+            "UserId" : "12df8176-0813-49d1-8767-92f4d89f1a81",
+            "sensors": "{\\'IPS\\':100,\\'Flow\\':200,\\'Social\\':300}",
+            "limit_bytes" : "100",
+            "enabled": "false",
+            "Group" : {
+                "name" : "Grupo1"
+            }
+        }
+    },
+    {
+        "model": "License_pool",
+        "data": {
+            "id" : "12df8176-0813-49d1-8767-92f4d89f1bbb",
+            "license_uuid" : "12df8176-0813-49d1-8767-92f4d89f1abc",             
+            "expires_at": "2019-01-01",
+            "duration": "6",
+            "sensors": "{\\'IPS\\':100,\\'Flow\\':200,\\'Social\\':300}",
+            "limit_bytes" : "100",
+            "aprobed": "true",
+            "fragementMB" : "false",
+            "fragmentTIME" : "false",
+            "fragmentSENSORS" : "true",
+            "comments" : "Pool de licencias con posibilidad de fragmentar sensores",
+            "Group" : {
+                "name" : "Grupo1"
+            }
+        }
+    },
+    {
+        "model": "License_pool",
+        "data": {
+            "id" : "12df8176-0813-49d1-8767-92f4d89f1aaa",
+            "license_uuid" : "12df8176-0813-49d1-8767-92f4d89f1def",             
+            "expires_at": "2019-01-01",
+            "duration": "6",
+            "sensors": "{\\'IPS\\':100,\\'Flow\\':200,\\'Social\\':300}",
+            "limit_bytes" : "100",
+            "aprobed": "true",
+            "fragementMB" : "true",
+            "fragmentTIME" : "false",
+            "fragmentSENSORS" : "true",
+            "comments" : "Pool de licencias con posibilidad de fragmentar MB/day y sensores",
+            "Group" : {
+                "name" : "Grupo1"
+            }
+        }
+    },
+    {
+        "model": "License_pool",
+        "data": {
+            "id" : "12df8176-0813-49d1-8767-92f4d89faaaa",
+            "license_uuid" : "12df8176-0813-49d1-8767-92f4d89f1def",             
+           "expires_at": "2019-01-01",
+            "duration": "6",
+            "sensors": "{\\'IPS\\':100,\\'Flow\\':200,\\'Social\\':300}",
+            "limit_bytes" : "100",
+            "aprobed": "true",
+            "fragementMB" : "false",
+            "fragmentTIME" : "false",
+            "fragmentSENSORS" : "false",
+            "comments" : "Pool de licencias sin posibilidad de fragmentar",
+            "Group" : {
+                "name" : "Grupo3"
+            }
+        }
+    },
+    {
+        "model": "License",
+        "data": {
+            "id" : "12df8176-0813-49d1-8767-92f4d89fffff",
+            "license_uuid" : "12df8176-0813-49d1-8767-92f4d89f1def",             
+            "expires_at": "2019-01-01",
+            "duration": "6",
+            "sensors": "{\\'IPS\\':100,\\'Flow\\':200,\\'Social\\':300}",
+            "limit_bytes" : "100",
+            "enbaled": "true",
+            "comments" : "Pool de licencias sin posibilidad de fragmentar",
+            "Cluster" : {
+                "id" : "12df8176-0813-49d1-8867-77f4d89f1c11"
+            }
+        }
+    },
+    {
+        "model": "License",
+        "data": {
+            "id" : "12df8176-0813-49d1-8767-92f4d89fffff",
+            "license_uuid" : "12df8176-0813-49d1-8767-92f4d89f1def",             
+            "expires_at": "2019-01-01",
+            "duration": "6",
+            "organization_uuid" : "12df8176-0832-49d1-8767-92f4d89f1def",
+            "sensors": "{\\'IPS\\':100,\\'Flow\\':200,\\'Social\\':300}",
+            "limit_bytes" : "100",
+            "enbaled": "true",
+            "comments" : "Pool de licencias sin posibilidad de fragmentar",
+            "Cluster" : {
+                "id" : "12df8176-0813-49d1-8867-77f4d89f1c11"
+            }
+        }
+    }
+
+]
