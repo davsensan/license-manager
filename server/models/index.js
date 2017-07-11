@@ -24,7 +24,7 @@ module.exports = function (sequelize){
 	Group.hasMany(License_pool, {foreignKey: {allowNull: false}, onDelete: 'Cascade'});
 
 	//Una licencia pertence a un cluster 
-	Licencia.belongsTo(cluster);
+	License.belongsTo(Cluster);
 
 
 	return {

@@ -23,7 +23,6 @@ module.exports = function(sequelize) {
         },
         organization_uuid : {
             type : DataTypes.UUID
-            }
         },
         duration: {
             type: DataTypes.INTEGER,

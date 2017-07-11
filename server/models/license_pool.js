@@ -79,16 +79,6 @@ module.exports = function(sequelize) {
                 }
             }
         },
-         fragmentTIME : { 
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: false,
-            validate : {
-                notEmpty: {
-                    msg: "Field fragmentTIME shouldn't be empty"
-                }
-            }
-        }, 
         fragmentSENSORS : {
             type: DataTypes.BOOLEAN,
             allowNull: false,
@@ -97,6 +87,7 @@ module.exports = function(sequelize) {
                 notEmpty: {
                     msg: "Field fragmentTIME shouldn't be empty"
                 }
+            }
         },
         delete : {
             type: DataTypes.BOOLEAN,
