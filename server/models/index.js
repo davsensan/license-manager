@@ -7,7 +7,7 @@ module.exports = function (sequelize){
 	const License_pool = require('./license_pool')(sequelize);
 
 	//Un usuario pertenece a un grupo
-	User.belongsTo(Organization);
+	User.belongsTo(Group);
 
 	//Un grupo tiene muchos usuarios o ninguno en caso de que sea null la clave externa
 	Group.hasMany(User);
@@ -21,7 +21,7 @@ module.exports = function (sequelize){
 
 	//Un pool de licencias pertenece a un grupo, y no puede NO pertener a ninguno (no puede ser null)
 	//Si una organización se borra, se borrarán todas las licencias asociadas a ella. Sin embargo no se borrarán sino que se marcarán como borradas
-	Organization.hasMany(License, {foreignKey: {allowNull: false}, onDelete: 'Cascade'});
+	Group.hasMany(License_pool, {foreignKey: {allowNull: false}, onDelete: 'Cascade'});
 
 	//Una licencia pertence a un cluster 
 	Licencia.belongsTo(cluster);
